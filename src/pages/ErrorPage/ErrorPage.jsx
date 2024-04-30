@@ -1,9 +1,12 @@
+import { Helmet } from "react-helmet-async";
 import { Link, useRouteError } from "react-router-dom";
 const ErrorPage = () => {
     const error = useRouteError();
     return (
         <section>
-
+            <Helmet>
+                <title>Lagoon | Eroor</title>
+            </Helmet>
             <div className="bg-black text-white px-6">
                 <div className="flex h-screen">
                     <div className="m-auto text-center">

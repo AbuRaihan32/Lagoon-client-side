@@ -11,7 +11,7 @@ const Home = () => {
     return (
         <div>
             <Helmet>
-                <title>Cozy | Home</title>
+                <title>Lagoon | Home</title>
             </Helmet>
             <div className="w-full rounded-3xl">
                 <div className="relative z-0">

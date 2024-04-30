@@ -10,7 +10,7 @@ const UpdateSpot = () => {
     const [currentSpot, setCurrentSpot] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:5000/userSpot/${id}`)
+        fetch(`https://10th-assignment-server-side-hfn76tsdn.vercel.app//userSpot/${id}`)
             .then(res => res.json())
             .then(dt => setCurrentSpot(dt));
     }, [id])
@@ -39,7 +39,7 @@ const UpdateSpot = () => {
         }
 
 
-        fetch(`http://localhost:5000/userSpot/${id}`, {
+        fetch(`https://10th-assignment-server-side-ten.vercel.app/userSpot/${id}`, {
             method: 'PATCH',
             headers: {
                 "content-type": "application/json"

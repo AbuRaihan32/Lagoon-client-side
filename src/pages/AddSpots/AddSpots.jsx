@@ -19,7 +19,7 @@ const AddSpots = () => {
 
         const newSpot = { image, tourists_spot_name, country_Name, location, short_description, average_cost, seasonality, travel_time, totalVisitorsPerYear, User_Email, User_Name }
 
-        fetch('http://localhost:5000/userAddedSpot', {
+        fetch('https://10th-assignment-server-side-ten.vercel.app/userAddedSpot', {
             method: 'POST',
             headers: {
                 "content-type": "application/json"

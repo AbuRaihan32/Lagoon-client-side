@@ -22,17 +22,17 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('http://localhost:5000/userSpots/admin@gmail.com')
+                loader: () => fetch('https://10th-assignment-server-side-ten.vercel.app/spotsByEmail/admin@gmail.com')
             },
             {
                 path: '/details/:id',
                 element: <PrivateRouts><HomeSpotsDetails></HomeSpotsDetails></PrivateRouts>,
-                loader: ({ params }) => fetch(`http://localhost:5000/userSpot/${params.id}`)
+                loader: ({ params }) => fetch(`https://10th-assignment-server-side-ten.vercel.app/userSpot/${params.id}`)
             },
             {
                 path: '/allDetails/:id',
                 element: <PrivateRouts><AllSpotDetails></AllSpotDetails></PrivateRouts>,
-                loader: ({ params }) => fetch(`http://localhost:5000/userSpot/${params.id}`)
+                loader: ({ params }) => fetch(`https://10th-assignment-server-side-ten.vercel.app/userSpot/${params.id}`)
             },
             {
                 path: '/add_spot',
@@ -41,12 +41,11 @@ const router = createBrowserRouter([
             {
                 path: '/my_list',
                 element: <PrivateRouts><MyListContainer></MyListContainer></PrivateRouts>,
-                loader: () => fetch('/agents.json')
             },
             {
                 path: '/all_spot',
                 element: <AllSpotsContainer></AllSpotsContainer>,
-                loader: () => fetch('http://localhost:5000/UAddedSpots')
+                loader: () => fetch('https://10th-assignment-server-side-ten.vercel.app/UAddedSpots')
             },
             {
                 path: '/updateSpot/:id',

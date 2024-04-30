@@ -3,13 +3,12 @@ import { BiSolidArea } from 'react-icons/bi';
 import { FaBath } from 'react-icons/fa';
 import { FaCircleChevronRight } from 'react-icons/fa6';
 import { IoBed, IoLocation } from 'react-icons/io5';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 
 const AllSpotsCarts = ({ info }) => {
-    const loc = useLocation();
-    console.log(loc);
+
 
 
     const { _id, image, tourists_spot_name, country_Name, location, average_cost, seasonality, travel_time , totalVisitorsPerYear} = info;

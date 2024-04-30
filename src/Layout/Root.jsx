@@ -7,7 +7,7 @@ const Root = () => {
     const navigation = useNavigation()
 
     return (
-        <div style={{fontFamily: 'Manrope, sans-serif'}} className="max-w-[1320px] relative mx-auto">
+        <div style={{fontFamily: 'Manrope, sans-serif'}} className="max-w-[1240px] relative mx-auto">
             <div className="absolute w-full z-50">
                 <Navbar navigation={navigation}></Navbar>
             </div>
