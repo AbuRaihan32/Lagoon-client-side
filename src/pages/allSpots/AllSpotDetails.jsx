@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { FaUser, FaVoicemail } from 'react-icons/fa';
 import { IoLocation } from 'react-icons/io5';
 import { useLoaderData, Link} from 'react-router-dom'
-const HomeSpotsDetails = () => {
+const AllSpotDetails = () => {
     // const [home, setHome] = useState([])
     const spot = useLoaderData();
 
@@ -65,7 +65,7 @@ const HomeSpotsDetails = () => {
                                     <p> <span className='text-xl font-bold'>Description : </span>
                                         <span className={'text-[18px]'}> {short_description}</span> </p>
                                 </div>
-                                <Link to={`/`} className=" w-[50%] mx-auto text-center relative px-5 py-2 font-medium text-green-600 group">
+                                <Link to={`/all_spot`} className=" w-[50%] mx-auto text-center relative px-5 py-2 font-medium text-green-600 group">
                                     <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-[18deg] border border-[#32CD32] group-hover:border-[#32CD32] group-hover:skew-x-[18deg]"></span>
                                     <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-[18deg] border border-[#32CD32] group-hover:border-[#32CD32] group-hover:-skew-x-[18deg]"></span>
                                     <span className="relative">View Details</span>
@@ -80,4 +80,4 @@ const HomeSpotsDetails = () => {
     );
 };
 
-export default HomeSpotsDetails;
+export default AllSpotDetails;

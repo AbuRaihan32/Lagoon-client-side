@@ -10,6 +10,7 @@ import UpdateSpot from "../pages/MyList/UpdateSpot";
 import HomeSpotsDetails from "../pages/HomeSpotsDetails";
 import AddSpots from "../pages/AddSpots/AddSpots";
 import MyListContainer from "../pages/MyList/MyListContainer";
+import AllSpotDetails from "../pages/allSpots/AllSpotDetails";
 
 
 const router = createBrowserRouter([
@@ -26,6 +27,11 @@ const router = createBrowserRouter([
             {
                 path: '/details/:id',
                 element: <PrivateRouts><HomeSpotsDetails></HomeSpotsDetails></PrivateRouts>,
+                loader: ({ params }) => fetch(`http://localhost:5000/userSpot/${params.id}`)
+            },
+            {
+                path: '/allDetails/:id',
+                element: <PrivateRouts><AllSpotDetails></AllSpotDetails></PrivateRouts>,
                 loader: ({ params }) => fetch(`http://localhost:5000/userSpot/${params.id}`)
             },
             {

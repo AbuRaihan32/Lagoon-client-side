@@ -3,8 +3,15 @@ import { BiSolidArea } from 'react-icons/bi';
 import { FaBath } from 'react-icons/fa';
 import { FaCircleChevronRight } from 'react-icons/fa6';
 import { IoBed, IoLocation } from 'react-icons/io5';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+
+
+
 const AllSpotsCarts = ({ info }) => {
+    const loc = useLocation();
+    console.log(loc);
+
+
     const { _id, image, tourists_spot_name, country_Name, location, average_cost, seasonality, travel_time , totalVisitorsPerYear} = info;
     return (
         <div
@@ -51,7 +58,7 @@ const AllSpotsCarts = ({ info }) => {
 
 
                     <div className="card-actions mx-auto mt-4">
-                        <Link to={`/details/${_id}`} className="relative px-5 py-2 font-medium text-green-600 group hidden md:inline">
+                        <Link to={`/allDetails/${_id}`} className="relative px-5 py-2 font-medium text-green-600 group hidden md:inline">
                             <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-[18deg] border border-[#32CD32] group-hover:border-[#32CD32] group-hover:skew-x-[18deg]"></span>
                             <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-[18deg] border border-[#32CD32] group-hover:border-[#32CD32] group-hover:-skew-x-[18deg]"></span>
                             <span className="relative">View Details</span>
