@@ -4,7 +4,7 @@ const SemiBanner = () => {
     return (
         <div>
             <div
-                className='bg-no-repeat bg-cover bg-center pt-7 rounded-b-3xl' style={{ backgroundImage: 'url(https://i.ibb.co/JnkxF6t/outdoor-swimming-pool.jpg)' }}>
+                className='bg-no-repeat bg-cover bg-center' style={{ backgroundImage: 'url(https://i.ibb.co/JnkxF6t/outdoor-swimming-pool.jpg)' }}>
                 <div className='flex justify-center items-center h-[calc(100vh-30vh)] text-red-50 bg-black bg-opacity-70 '>
                     <div className=' text-center'>
                         <h1 className='font-medium text-[18px] mb-2'>THE BEST WAY TO</h1>
