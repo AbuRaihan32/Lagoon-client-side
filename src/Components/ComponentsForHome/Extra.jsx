@@ -1,7 +1,7 @@
 
 const Extra = () => {
     return (
-        <div className="w-[85%] mx-auto">
+        <div className="w-[85%] mx-auto mb-9">
             <section className="p-6 bg-gray-800 dark:bg-gray-100 text-gray-100 dark:text-gray-800">
                 <div className="container p-4 mx-auto text-center">
                     <h2 className="text-4xl font-bold">Trusted by the industry leaders</h2>

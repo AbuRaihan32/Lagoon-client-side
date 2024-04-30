@@ -2,7 +2,7 @@
 
 const Extra_1 = () => {
     return (
-        <div className="w-[80%] mx-auto">
+        <div className="w-[85%] mx-auto my-14">
             <section className="py-6 sm:py-12 bg-gray-800 dark:bg-gray-100 text-gray-100 dark:text-gray-800">
                 <div className="container p-6 mx-auto space-y-8">
                     <div className="space-y-2 text-center">
@@ -12,7 +12,7 @@ const Extra_1 = () => {
                     <div className="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
                         <article className="flex flex-col bg-gray-900 dark:bg-gray-50">
                             <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
-                                <img alt="" className="object-cover w-full h-52 bg-gray-500 dark:bg-gray-500" src="https://source.unsplash.com/200x200/?fashion?1" />
+                                <img alt="" className="object-cover w-full h-52 bg-gray-500 dark:bg-gray-500" src="https://i.ibb.co/TbSHDzj/pexels-asadphoto-1450351.jpg" />
                             </a>
                             <div className="flex flex-col flex-1 p-6">
                                 <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum"></a>
@@ -26,7 +26,7 @@ const Extra_1 = () => {
                         </article>
                         <article className="flex flex-col bg-gray-900 dark:bg-gray-50">
                             <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
-                                <img alt="" className="object-cover w-full h-52 bg-gray-500 dark:bg-gray-500" src="https://source.unsplash.com/200x200/?fashion?2" />
+                                <img alt="" className="object-cover w-full h-52 bg-gray-500 dark:bg-gray-500" src="https://i.ibb.co/jvbpyjD/pexels-mdx014-814499.jpg" />
                             </a>
                             <div className="flex flex-col flex-1 p-6">
                                 <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum"></a>
@@ -40,7 +40,7 @@ const Extra_1 = () => {
                         </article>
                         <article className="flex flex-col bg-gray-900 dark:bg-gray-50">
                             <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
-                                <img alt="" className="object-cover w-full h-52 bg-gray-500 dark:bg-gray-500" src="https://source.unsplash.com/200x200/?fashion?3" />
+                                <img alt="" className="object-cover w-full h-52 bg-gray-500 dark:bg-gray-500" src="https://i.ibb.co/jhSCKzy/pexels-michaelslens-946686.jpg" />
                             </a>
                             <div className="flex flex-col flex-1 p-6">
                                 <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum"></a>
@@ -54,7 +54,7 @@ const Extra_1 = () => {
                         </article>
                         <article className="flex flex-col bg-gray-900 dark:bg-gray-50">
                             <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
-                                <img alt="" className="object-cover w-full h-52 bg-gray-500 dark:bg-gray-500" src="https://source.unsplash.com/200x200/?fashion?4" />
+                                <img alt="" className="object-cover w-full h-52 bg-gray-500 dark:bg-gray-500" src="https://i.ibb.co/WGTdnwR/pexels-sanat-anghan-25736600-6785289.jpg" />
                             </a>
                             <div className="flex flex-col flex-1 p-6">
                                 <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum"></a>
