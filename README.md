@@ -16,9 +16,9 @@ five bullet points features and characteristics:
         Secure login and registration using email and password.
         Social login options such as Google.
         Conditional navigation items based on user login status.
-        Tourist Spot Management:
-
-    2. Users can add, view, update, and delete tourist spots.
+       
+     2. Tourist Spot Management:
+        Users can add, view, update, and delete tourist spots.
         All actions provide real-time feedback through toast notifications.
 
     3. Responsive Design:
