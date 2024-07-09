@@ -1,80 +1,97 @@
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import { Td, Tr } from 'react-super-responsive-table';
-import { RiDeleteBinLine } from "react-icons/ri";
+import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
+import { RiDeleteBin6Line } from "react-icons/ri";
 import { CiEdit } from "react-icons/ci";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 const MyListCard = ({ spot, index, toggle, setToggle }) => {
-    const {
-        _id,
-        tourists_spot_name,
-        country_Name,
-        location,
-        average_cost } = spot;
+  const {
+    _id,
+    tourists_spot_name,
+    country_Name,
+    location,
+    average_cost,
+    image,
+  } = spot;
 
-
-
-    const handleDelete = () => {
-        Swal.fire({
-            title: "Are you sure?",
-            text: "You won't be able to revert this!",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, delete it!"
-        }).then((result) => {
-            if (result.isConfirmed) {
-                fetch(`https://10th-assignment-server-side-ten.vercel.app/delete/${_id}`, {
-                    method: 'DELETE',
-                })
-                    .then(res => res.json())
-                    .then(dt => {
-                        setToggle(!toggle);
-                        console.log(dt);
-                        if (dt.deletedCount === 1) {
-                            Swal.fire({
-                                title: "Deleted!",
-                                text: "Your file has been deleted.",
-                                icon: "success"
-                            });
-                        }
-                    })
+  const handleDelete = () => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        fetch(
+          `https://10th-assignment-server-side-ten.vercel.app/delete/${_id}`,
+          {
+            method: "DELETE",
+          }
+        )
+          .then((res) => res.json())
+          .then((dt) => {
+            setToggle(!toggle);
+            console.log(dt);
+            if (dt.deletedCount === 1) {
+              Swal.fire({
+                title: "Deleted!",
+                text: "Your file has been deleted.",
+                icon: "success",
+              });
             }
-        });
-    }
+          });
+      }
+    });
+  };
 
-    return (
-        <>
-            <Tr className="border-b-2 md:py-4 border-gray-300 relative">
-                <Td className="px-6 py-8 font-medium text-gray-900 dark:text-white whitespace-nowrap">{index + 1}</Td>
-                <Td className="">{country_Name}</Td>
-                <Td>{tourists_spot_name}</Td>
-                <Td> {location} </Td>
-                <Td> {average_cost}</Td>
-                <Td>
-                    <div className='space-x-8 flex flex-col md:flex-row items-center justify-center absolute md:right-12 md:top-1 -top-36 -right-2 space-y-6 text-center'>
-                        <div className=''>
-                            <Link to={`/updateSpot/${_id}`} className="font-medium btn"><CiEdit></CiEdit> <span className='hidden lg:inline'>Update</span></Link>
-                        </div>
-
-                        <div className='flex md:inline justify-start md:w-auto w-full -mt-10'>
-                            <button onClick={handleDelete} className="font-medium btn"><RiDeleteBinLine></RiDeleteBinLine> <span className='hidden lg:inline'>Delete</span></button>
-                        </div>
-                    </div>
-                </Td>
-            </Tr>
-
-        </>
-    );
+  return (
+    <>
+      <tr>
+        <td>{index + 1}</td>
+        <td>
+          <div className="flex items-center gap-3">
+            <div className="avatar">
+              <div className="mask mask-squircle w-12 h-12">
+                <img src={image} alt="Avatar" />
+              </div>
+            </div>
+            <div>
+              <div className="">{country_Name}</div>
+            </div>
+          </div>
+        </td>
+        <td>{tourists_spot_name}</td>
+        <td>{location}</td>
+        <td>{average_cost} $</td>
+        <td>
+          <Link
+            to={`/updateSpot/${_id}`}
+            className="btn btn-circle btn-outline"
+          >
+            <CiEdit className="text-xl"></CiEdit>
+          </Link>
+        </td>
+        <td>
+          <button
+            onClick={() => handleDelete()}
+            className="btn btn-circle btn-outline"
+          >
+            <RiDeleteBin6Line></RiDeleteBin6Line>
+          </button>
+        </td>
+      </tr>
+    </>
+  );
 };
 
 MyListCard.propTypes = {
-    spot: PropTypes.object.isRequired,
-    index: PropTypes.node,
-    toggle: PropTypes.node,
-    setToggle: PropTypes.node
-}
+  spot: PropTypes.object.isRequired,
+  index: PropTypes.node,
+  toggle: PropTypes.node,
+  setToggle: PropTypes.func,
+};
 
 export default MyListCard;

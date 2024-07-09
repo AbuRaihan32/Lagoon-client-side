@@ -1,58 +1,74 @@
-import SemiBanner from '../../Components/Shared/SemiBanner';
-import { Table, Thead, Tbody, Tr, Th } from 'react-super-responsive-table';
-import 'react-super-responsive-table/dist/SuperResponsiveTableStyle.css';
-import { useContext, useEffect, useState } from 'react';
-import { AuthContext } from '../../Providers/AuthProviders'
-import MyListCard from './MyListCard';
-import { Helmet } from 'react-helmet-async';
+import "react-super-responsive-table/dist/SuperResponsiveTableStyle.css";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../Providers/AuthProviders";
+import MyListCard from "./MyListCard";
+import { Helmet } from "react-helmet-async";
 
 const MyListContainer = () => {
-    const { user } = useContext(AuthContext);
-    const [spots, setSpots] = useState([]);
-    const [toggle, setToggle] = useState(false);
+  const { user } = useContext(AuthContext);
+  const [spots, setSpots] = useState([]);
+  const [toggle, setToggle] = useState(false);
 
-    useEffect(() => {
-        fetch(`https://10th-assignment-server-side-ten.vercel.app/userSpots/${user?.email}`)
-            .then(res => res.json())
-            .then(data => setSpots(data))
-    }, [user, toggle])
+  useEffect(() => {
+    fetch(
+      `https://10th-assignment-server-side-ten.vercel.app/spotsByEmail/${user?.email}`
+    )
+      .then((res) => res.json())
+      .then((data) => setSpots(data));
+  }, [user, toggle]);
 
-    return (
-        <>
-            <Helmet>
-                <title>My List | Lagoon</title>
-            </Helmet>
-            <SemiBanner></SemiBanner>
-            {
-                spots?.length < 1 ? <div className='w-full h-[300px] flex items-center justify-center text-red-800 font-semibold text-4xl'><div>You have not added any spots yet.</div></div> :
-                    <div className='pt-24 px-7'>
-                        <Table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
-                            <Thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                                <Tr className=''>
-                                    <Th className="md:w-[10%] pl-7 md:py-4"> NO. </Th>
-                                    <Th className="md:w-[18%]"> Country Name: </Th>
-                                    <Th className="md:w-[18%]"> Spot Name: </Th>
-                                    <Th className="md:w-[18%]"> Location: </Th>
-                                    <Th className="md:w-[18%]"> Average Cost: </Th>
-                                    <Th></Th>
-                                </Tr>
-                            </Thead>
-                            <Tbody>
-                                {
-                                    spots.map((data, id) => <MyListCard
-                                        key={data._id}
-                                        spot={data}
-                                        index={id}
-                                        toggle={toggle}
-                                        setToggle={setToggle}
-                                    ></MyListCard>)
-                                }
-                            </Tbody>
-                        </Table>
-                    </div>
-            }
-        </>
-    );
+  console.log(user.email);
+
+  return (
+    <div className="bg-black bg-opacity-80 rounded-b-3xl">
+      <div className="max-w-5xl mx-auto">
+        <Helmet>
+          <title>My List | Lagoon</title>
+        </Helmet>
+        {spots?.length < 1 ? (
+          <div className="w-full h-[500px] flex items-center justify-center text-white font-semibold text-4xl">
+            <div>You have not added any spots yet.</div>
+          </div>
+        ) : (
+          <div className="py-24 px-7 min-h-[500px] ">
+            <div>
+              <h1 className="text-3xl text-white text-center font-semibold my-10">
+                LIST OF SPOTS YOU HAVE ADDED
+              </h1>
+            </div>
+
+            <div className="overflow-x-auto bg-gray-100 p-5 rounded-3xl">
+              <table className="table">
+                {/* head */}
+                <thead>
+                  <tr>
+                    <th> NO.</th>
+                    <th>Country Name:</th>
+                    <th>Spot Name:</th>
+                    <th>Location:</th>
+                    <th>Average Cost:</th>
+                    <th>Action</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {spots.map((data, id) => (
+                    <MyListCard
+                      key={data._id}
+                      spot={data}
+                      index={id}
+                      toggle={toggle}
+                      setToggle={setToggle}
+                    ></MyListCard>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
 };
 
 export default MyListContainer;
