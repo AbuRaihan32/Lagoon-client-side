@@ -1,4 +1,3 @@
-import { RiEye2Line } from "react-icons/ri";
 
 const Footer = () => {
   return (
@@ -18,7 +17,7 @@ const Footer = () => {
             <li></li>
           </ul>
         </div>
-        <div className="bg-slate-950 bg-opacity-40">
+        <div>
           <div className=" flex flex-col justify-between pt-20 py-10 mx-auto space-y-8 lg:flex-row lg:space-y-0">
             <div className="lg:w-1/3 text-center">
               <a
@@ -26,20 +25,12 @@ const Footer = () => {
                 href="#"
                 className="flex justify-center space-x-3 lg:justify-start"
               >
-                <div className="w-14 h-14 mx-auto rounded-full mb-3">
-                  <RiEye2Line className="text-6xl text-[#32CD32]"></RiEye2Line>
+                <div className="mx-auto rounded-full mb-3">
+                  <img src="/lagoon-logo.png" alt="" />
                 </div>
               </a>
-              <a className="btn btn-ghost text-3xl font-bold">
-                LaG{" "}
-                <span className="text-3xl flex -mr-2 -ml-2 font-extrabold text-[#32CD32]">
-                  <RiEye2Line></RiEye2Line>
-                  <RiEye2Line className="-ml-[2px]"></RiEye2Line>
-                </span>{" "}
-                N
-              </a>
               <p>
-                The Best Way To Find <br /> To Enjoy the Beauty of Nature
+                Enjoy the Beauty of Nature
               </p>
             </div>
             <div className="grid grid-cols-2 text-sm gap-x-3 gap-y-8 lg:w-2/3 sm:grid-cols-4">

@@ -70,7 +70,7 @@ const AddSpots = () => {
         <Helmet>
           <title>Add Spot</title>
         </Helmet>
-        <div className="w-full bg-gray-900 bg-opacity-80">
+        <div className="w-full ">
           <div className="max-w-5xl mx-auto min-h-screen pt-32 pb-24 flex items-center justify-center px-5 rounded-b-3xl">
             <div className="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden">
               <div className="md:flex w-full">

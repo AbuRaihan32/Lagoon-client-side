@@ -20,7 +20,7 @@ const MyListContainer = () => {
   console.log(user.email);
 
   return (
-    <div className="bg-black bg-opacity-80 rounded-b-3xl">
+    <div className="">
       <div className="max-w-5xl mx-auto">
         <Helmet>
           <title>My List | Lagoon</title>
@@ -30,18 +30,18 @@ const MyListContainer = () => {
             <div>You have not added any spots yet.</div>
           </div>
         ) : (
-          <div className="py-24 px-7 min-h-[500px] ">
+          <div className="py-24 px-7 ">
             <div>
-              <h1 className="text-3xl text-white text-center font-semibold my-10">
+              <h1 className="text-3xl  text-center font-semibold my-10">
                 LIST OF SPOTS YOU HAVE ADDED
               </h1>
             </div>
 
-            <div className="overflow-x-auto bg-gray-100 p-5 rounded-3xl">
+            <div className="overflow-x-auto text-gray-950 bg-gray-100 p-5 rounded-3xl">
               <table className="table">
                 {/* head */}
                 <thead>
-                  <tr>
+                  <tr className="text-black">
                     <th> NO.</th>
                     <th>Country Name:</th>
                     <th>Spot Name:</th>
@@ -51,7 +51,7 @@ const MyListContainer = () => {
                     <th>Action</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody className="text-black">
                   {spots.map((data, id) => (
                     <MyListCard
                       key={data._id}

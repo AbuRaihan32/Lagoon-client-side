@@ -49,7 +49,7 @@ const MyListCard = ({ spot, index, toggle, setToggle }) => {
 
   return (
     <>
-      <tr>
+      <tr className="hover:bg-gray-200">
         <td>{index + 1}</td>
         <td>
           <div className="flex items-center gap-3">
@@ -69,7 +69,7 @@ const MyListCard = ({ spot, index, toggle, setToggle }) => {
         <td>
           <Link
             to={`/updateSpot/${_id}`}
-            className="btn btn-circle btn-outline"
+            className="btn btn-circle btn-outline border-black text-black"
           >
             <CiEdit className="text-xl"></CiEdit>
           </Link>
@@ -77,7 +77,7 @@ const MyListCard = ({ spot, index, toggle, setToggle }) => {
         <td>
           <button
             onClick={() => handleDelete()}
-            className="btn btn-circle btn-outline"
+            className="btn btn-circle btn-outline border-black text-black"
           >
             <RiDeleteBin6Line></RiDeleteBin6Line>
           </button>

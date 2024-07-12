@@ -30,17 +30,17 @@ const AllSpotsContainer = () => {
       </Helmet>
 
       <div>
-        <div className="text-center min-w-screen min-h-screen rounded-b-3xl bg-green-100 bg-opacity-80 pt-32 pb-24">
+        <div className="text-center min-w-screen min-h-screen rounded-b-3xl bg-opacity-80 pt-32 pb-24">
           {spots?.length < 1 ? (
-            <div className="w-full h-[500px] flex items-center justify-center text-[#fcfcfc] font-semibold text-4xl">
+            <div className="w-full h-[500px] flex items-center justify-center  font-semibold text-4xl">
               <div>You have not added any spots yet.</div>
             </div>
           ) : (
             <div className="max-w-5xl mx-auto">
-              <h1 className="text-4xl font-bold mb-7 text-white">
+              <h1 className="text-4xl font-bold mb-7">
                 All Tourists Spots
               </h1>
-              <p className="px-5 md:mx-32 text-white mb-7">
+              <p className="px-5 md:mx-32 mb-7">
                 Almost all people in the world have a dream to have a home with
                 a beautiful environment and a tidy home is an indicator of a
                 persons taste, so you can choose our homes to fulfill your

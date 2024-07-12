@@ -1,14 +1,16 @@
 import { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProviders";
-import { RiEye2Line } from "react-icons/ri";
 import { BiLogInCircle, BiLogOutCircle } from "react-icons/bi";
 import { PuffLoader } from 'react-spinners'
+import PropTypes from 'prop-types'
 
 
-const Navbar = () => {
+const Navbar = ({path, setDark}) => {
     const { user, logOutUser } = useContext(AuthContext);
     const [theme, setTheme] = useState('light');
+    
+    setDark(theme)
 
     useEffect(() => {
         localStorage.setItem('theme', theme);
@@ -27,15 +29,15 @@ const Navbar = () => {
 
     const NavLinks =
         <>
-            <li><NavLink className={({ isActive }) => isActive ? 'border border-[#32CD32] hover:bg-[#008000] rounded-md py-[7px] px-3' : 'py-[6px] px-3'} to={'/'}>Home</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? 'border border-[#32CD32] hover:bg-[#008000] hover:text-white rounded-md py-[7px] px-3' : 'py-[6px] px-3'} to={'/'}>Home</NavLink></li>
 
-            <li><NavLink className={({ isActive }) => isActive ? 'border border-[#32CD32] hover:bg-[#008000] rounded-md py-[7px] px-3' : 'py-[6px] px-3'} to={'/all_spot'}>All Tourists Spot</NavLink></li>
+            <li><NavLink className={({ isActive }) => isActive ? 'border border-[#32CD32] hover:bg-[#008000] hover:text-white rounded-md py-[7px] px-3' : 'py-[6px] px-3'} to={'/all_spot'}>All Tourists Spot</NavLink></li>
             {
-                user && <li><NavLink className={({ isActive }) => isActive ? 'border border-[#32CD32] hover:bg-[#008000] rounded-md py-[7px] px-3' : 'py-[6px] px-3'} to={'/add_spot'}>Add Tourists Spot</NavLink></li>
+                user && <li><NavLink className={({ isActive }) => isActive ? 'border border-[#32CD32] hover:bg-[#008000] hover:text-white rounded-md py-[7px] px-3' : 'py-[6px] px-3'} to={'/add_spot'}>Add Tourists Spot</NavLink></li>
             }
 
             {
-                user && <li><NavLink className={({ isActive }) => isActive ? 'border border-[#32CD32] hover:bg-[#008000] rounded-md py-[7px] px-3' : 'py-[6px] px-3'} to={'/my_list'}>My List</NavLink></li>
+                user && <li><NavLink className={({ isActive }) => isActive ? 'border border-[#32CD32] hover:bg-[#008000] hover:text-white rounded-md py-[7px] px-3' : 'py-[6px] px-3'} to={'/my_list'}>My List</NavLink></li>
             }
 
 
@@ -53,7 +55,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className="navbar z-50 text-white mt-6 pr-8">
+        <div className={`navbar z-50 ${path.pathname === '/' && 'text-white'} mt-6 pr-8`}>
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -91,7 +93,7 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </div>
-                <a className="btn btn-ghost text-2xl md:text-3xl font-bold">LaG<span className="text-3xl flex -mr-2 -ml-2 font-extrabold text-[#32CD32]"><RiEye2Line></RiEye2Line><RiEye2Line className="-ml-[2px] rotate-90"></RiEye2Line></span> N</a>
+                <img className="w-28 md:w-40 md:ml-5 " src="/lagoon-logo.png" alt="" />
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu-horizontal px-1 gap-5 items-center font-semibold">
@@ -160,5 +162,10 @@ const Navbar = () => {
         </div>
     );
 };
+
+Navbar.propTypes = {
+    path: PropTypes.object,
+    setDark: PropTypes.func
+}
 
 export default Navbar;
