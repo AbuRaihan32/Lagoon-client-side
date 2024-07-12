@@ -5,7 +5,7 @@ The website provides comprehensive information about various tourist spots aroun
 
 ## Live Site URL
 
-[Visit DiagPulse](https://tn-assignment.web.app/)
+[Visit Lagoon](https://tn-assignment.web.app/)
 
 
 
@@ -34,7 +34,7 @@ The website provides comprehensive information about various tourist spots aroun
  <br/>
 
 ## used technologies:
-   1. react.js     2. javaScript    3. tailwindCss      4. firebase    5. react-router-dom    6. html
+   1. react.js     2. javaScript    3. tailwindCss      4. firebase    5. react-router-dom    6. react-hook-form
 
 
 ## used npm packages:
