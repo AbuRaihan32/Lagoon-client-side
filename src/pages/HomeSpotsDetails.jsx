@@ -24,25 +24,20 @@ const HomeSpotsDetails = () => {
       <Helmet>
         <title>Lagoon | Details</title>
       </Helmet>
-      <div
-        style={{
-          backgroundImage:
-            "url(https://i.ibb.co/c3R6bpD/pexels-hebaysal-2776479.jpg)",
-        }}
-        className="bg-cover bg-center rounded-b-3xl"
-      >
-        <div className="min-w-screen min-h-screen pt-32 pb-24 bg-gray-900 bg-opacity-80 flex items-center justify-center px-5 rounded-b-3xl">
-          <div className="flex flex-col overflow-hidden rounded w-[95%] lg:w-[80%]">
+      <div>
+        <div className="min-w-screen min-h-screen pt-32 pb-24 flex items-center justify-center px-5">
+          <div className="flex flex-col overflow-hidden w-[95%] lg:w-[80%]">
             <div className="h-[calc(100vh-30vh)] ">
               <img
                 src={image}
                 alt=""
-                className="w-full h-full object-cover bg-gray-500 rounded-3xl"
+                className="w-full h-full object-cover bg-gray-500 "
               />
             </div>
             <div className="w-full flex justify-center -mt-16">
-              <div className="w-[90%] md:w-[85%] pb-12 m-4 mx-auto space-y-6  lg:rounded-md  card p-6 bg-base-100 shadow-xl border border-orange-600 bg-opacity-90">
+              <div className="w-[90%] md:w-[85%] pb-12 m-4 mx-auto space-y-6  card rounded-none p-6 bg-base-100 shadow-lg  bg-opacity-90">
                 <div className="space-y-2">
+                  <h1 className="text-3xl text-center py-3">Spot Details</h1>
                   <div className="py-5 flex flex-col md:flex-row justify-around">
                     <h2 className="text-[21px] font-bold text-start">
                       {" "}

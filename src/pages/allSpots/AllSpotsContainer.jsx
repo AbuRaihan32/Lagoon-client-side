@@ -55,9 +55,9 @@ const AllSpotsContainer = () => {
                   </div>
                   <select
                     onChange={handleChange}
-                    className="text-2xl font-bold rounded border-2 border-purple-700 text-gray-600 h-14 w-[300px] pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
+                    className="text-2xl font-bold border-2 rounded-full border-[#32cd32] text-gray-600 h-14 w-[300px] pl-5 pr-10 bg-white hover:border-gray-400 focus:outline-none appearance-none"
                   >
-                    <option>Sort By:</option>
+                    <option>Sort By -</option>
                     <option value="ascending">Cost Low to High</option>
                     <option value="descending">Cost High to Low</option>
                   </select>

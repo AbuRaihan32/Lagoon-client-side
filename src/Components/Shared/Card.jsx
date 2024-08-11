@@ -65,14 +65,14 @@ const Card = ({ info }) => {
         transformStyle: "preserve-3d",
         transform,
       }}
-      className="rounded-xl bg-gradient-to-br from-green-300 to-green-300"
+      className=" bg-gradient-to-br from-green-300 to-green-300"
     >
       <div
         style={{
           transform: "translateZ(75px)",
           transformStyle: "preserve-3d",
         }}
-        className="inset-4 grid place-content-center rounded-xl bg-transparent shadow-lg"
+        className="  bg-transparent shadow-lg"
       >
         <div
           style={{
@@ -80,10 +80,10 @@ const Card = ({ info }) => {
           }}
           className="text-center"
         >
-          <div className="border rounded-xl p-7 bg-green-50 shadow-xl text-start">
+          <div className="border  p-7 bg-green-50 shadow-xl text-start">
             <figure>
               <img
-                className="h-[200px] w-full rounded-xl"
+                className="h-[200px] w-full "
                 src={image}
                 alt="spot-image"
               />

@@ -130,7 +130,7 @@ const Navbar = ({path, setDark}) => {
                                 </div>
                             </div>
 
-                            <button onClick={signOutBtnHandler} className="relative px-5 py-2 font-medium text-white group hidden md:inline">
+                            <button onClick={signOutBtnHandler} className="relative px-5 py-2 font-medium  group hidden md:inline">
                                 <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-[18deg] border border-[#32CD32] group-hover:border-[#32CD32] group-hover:skew-x-[18deg]"></span>
                                 <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-[18deg] border border-[#32CD32] group-hover:border-[#32CD32] group-hover:-skew-x-[18deg]"></span>
 
@@ -139,14 +139,14 @@ const Navbar = ({path, setDark}) => {
                         </> :
 
                         <>
-                            <Link to={'/login'} className="relative px-5 py-2 font-medium text-white group mr-5">
+                            <Link to={'/login'} className="relative px-5 py-2 font-medium  group mr-5">
                                 <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-[18deg] border border-[#32CD32] group-hover:border-[#32CD32] group-hover:skew-x-[18deg]"></span>
                                 <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-[18deg] border border-[#32CD32] group-hover:border-[#32CD32] group-hover:-skew-x-[18deg]"></span>
 
                                 <span className="flex items-center gap-2 relative"><BiLogInCircle className="text-xl"></BiLogInCircle> <span className="hidden md:inline">Sign In</span> </span>
                             </Link>
 
-                            <Link to={'/register'} className="relative px-5 py-2 font-medium text-white group mr-5 hidden md:inline">
+                            <Link to={'/register'} className="relative px-5 py-2 font-medium group mr-5 hidden md:inline">
                                 <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform translate-x-0 -skew-x-[18deg] border border-[#32CD32] group-hover:border-[#32CD32] group-hover:skew-x-[18deg]"></span>
                                 <span className="absolute inset-0 w-full h-full transition-all duration-300 ease-out transform skew-x-[18deg] border border-[#32CD32] group-hover:border-[#32CD32] group-hover:-skew-x-[18deg]"></span>
 

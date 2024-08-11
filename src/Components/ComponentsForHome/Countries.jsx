@@ -16,7 +16,7 @@ const Countries = () => {
         Travel is very pleasant if you can experience it. Allah Ta ala said
         travel in the world and see what happened to the disbelievers.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-start">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-start">
         {country.map((dt) => (
           <Country key={dt._id} country={dt}></Country>
         ))}

@@ -28,21 +28,21 @@ const Home = () => {
         <div
           className={` ${dark !== 'light' ? ' text-center  pt-32 -mt-4 md:-mt-12 relative z-50' : 'bg-[url(https://i.ibb.co/q0bV56r/design.png)] text-center bg-no-repeat bg-contain bg-top pt-32 -mt-4 md:-mt-12 relative z-50'}`}
         >
-          <div className="max-w-5xl mx-auto">
+          <div className="w-[90%] md:max-w-5xl mx-auto">
             <TouristSpotsContainer info={info}></TouristSpotsContainer>
           </div>
         </div>
-        <div className="max-w-5xl mx-auto mt-20">
+        <div className="w-[90%] md:max-w-5xl mx-auto mt-20">
           <Countries></Countries>
         </div>
 
         {/* Extra Sections */}
         <div className="mt-20 w-full bg-green-200">
-          <div className="max-w-5xl mx-auto">
+          <div className="w-[90%] md:max-w-5xl mx-auto">
             <Extra_1></Extra_1>
           </div>
         </div>
-        <div className="max-w-5xl mx-auto">
+        <div className="w-[90%] md:max-w-5xl mx-auto">
           <Extra></Extra>
         </div>
       </div>

@@ -37,7 +37,7 @@ const MyListContainer = () => {
               </h1>
             </div>
 
-            <div className="overflow-x-auto text-gray-950 bg-gray-100 p-5 rounded-3xl">
+            <div className="overflow-x-auto text-gray-950 bg-gray-100 p-5 shadow-lg">
               <table className="table">
                 {/* head */}
                 <thead>

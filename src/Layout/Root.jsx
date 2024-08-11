@@ -16,7 +16,7 @@ const Root = () => {
 
   return (
     <div
-      style={{ fontFamily: "Manrope, sans-serif" }}
+      style={{ fontFamily: "Signika" }}
       className="w-full relative mx-auto"
     >
       <div className="absolute w-full z-50">
